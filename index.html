@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a2441">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Allenamento 43 · V3.6 Premium · Polish 1</title>
 <!-- V3.6 PREMIUM · POLISH 1 · 19 INDIVIDUAL WEBP INLINE · NO SPRITE · NO BLOB · NO SW -->
 <style>
@@ -106,5 +110,13 @@ document.querySelectorAll('.bottom-nav button').forEach(b=>b.onclick=()=>{if(b.d
 window.addEventListener('visibilitychange',()=>{if(!document.hidden && timerOverlay.classList.contains('show')) tick();});
 function render(){if(state.route==='home') renderHome(); else if(state.route==='week') renderWeek(); else if(state.route==='progress') renderProgress(); else renderProfile();}
 render();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .catch(err => console.error('Service Worker:', err));
+  });
+}
 </script>
 </body></html>
