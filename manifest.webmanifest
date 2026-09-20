@@ -1,0 +1,30 @@
+{
+  "name": "Allenamento 43 Premium",
+  "short_name": "Allenamento 43",
+  "description": "Allenamento guidato personale",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f0e8",
+  "theme_color": "#0a2441",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
